@@ -21,7 +21,9 @@ export default class App extends React.Component {
         places: prevState.places.concat({
           key: Math.random(),
           name: placeName,
-          image: placeImage,
+          image: {
+            uri: 'https://image.nj.com/home/njo-media/width620/img/entertainment_impact/photo/njbeachcapemb-64jpg-eb1b27e66c0c2c85.jpg'
+          },
         })
       };
     });
