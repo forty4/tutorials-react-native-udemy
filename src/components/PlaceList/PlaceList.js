@@ -4,15 +4,16 @@ import { StyleSheet, FlatList } from 'react-native';
 import ListItem from '../ListItem/ListItem';
 
 const PlaceList = (props) => {
-  return (<FlatList
-              style={styles.listContainer}
-              data={props.places}
-              renderItem={(info) => (
-                <ListItem
-                    placeName={info.item.name}
-                    placeImage={info.item.image}
-                    onItemPressed={() => props.onItemDeleted(info.item.key)} />
-              )} />
+  return (
+    <FlatList
+      style={styles.listContainer}
+      data={props.places}
+      renderItem={(info) => (
+        <ListItem
+            placeName={info.item.name}
+            placeImage={info.item.image}
+            onItemPressed={() => props.onItemSelected(info.item.key)} />
+      )} />
   );
 };
 
